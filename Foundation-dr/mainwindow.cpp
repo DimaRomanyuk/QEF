@@ -16,6 +16,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     setupConnections();
 
+    Files::createDirectoryForScripts();
+
 
 
 //------------Place for creating documents/catalogs/registers-------------
@@ -362,11 +364,5 @@ void MainWindow::setupConnections()
     connect(ui->buttonCreateCatalog, SIGNAL(clicked()), m_createCatalogMapper, SLOT(map()));
     connect(ui->comboBoxCatalogs, SIGNAL(activated(int)), this, SLOT(slotComboCatalogActivated(int)));
     m_createCatalogMapper->setMapping(ui->buttonCreateCatalog, 0);
-    return;
-}
-void MainWindow::function1()
-{
-    int a = 9;
-    int b =10;
     return;
 }

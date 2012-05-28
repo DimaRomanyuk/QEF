@@ -33,3 +33,9 @@ QString Files::createScriptFile(QString name,Type::m_type type)
     file.close();
     return filename;
 }
+void Files::createDirectoryForScripts()
+{
+    QDir *directoty = new QDir();
+    directoty->mkdir("scripts");
+    qDebug()<<"Directoy was created/opened";
+}

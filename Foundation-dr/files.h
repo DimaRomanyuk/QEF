@@ -20,6 +20,7 @@ signals:
 
 public slots:
     static QString createScriptFile(QString name, Type::m_type type);
+    static void createDirectoryForScripts();
 };
 
 #endif // FILES_H
